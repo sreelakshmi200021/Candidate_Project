@@ -1,0 +1,22 @@
+ <body>
+  <div class="topnav1">
+    <a routerLink="/login"><u>Trainer</u></a>
+    <a routerLink="/logincoordinator"><u>Coordinator</u></a>
+    <router-outlet></router-outlet>
+</div>
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+   
+      <h2 class="active"> LogIn </h2>
+      <h4 style="color: white;">Trainer</h4>
+
+      <form >
+        <input type="text" id="login" class="fadeIn second" [(ngModel)]="username" name="username" placeholder="username" required>
+        <input type="password" id="password" class="fadeIn third" [(ngModel)]="password" name="password" placeholder="password">
+        <input type="submit"  (click)="checkLogin()" class="fadeIn fourth"  value="LogIn">
+      </form>
+    </div>
+  </div>
+</body> 
+

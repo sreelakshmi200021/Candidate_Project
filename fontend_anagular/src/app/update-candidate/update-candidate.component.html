@@ -1,0 +1,124 @@
+
+<head>
+    <title>Coordinate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+        <body style="background-color: black;">
+            <h1><u><label>Update Candidate</label></u></h1>
+            <form  role="form" action="/action_page.php">
+                <table style="margin-left:auto;margin-right:auto;background-color: rgb(250, 250, 253);max-width:1200px;padding:50px 20px;">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <tr>
+                            <td><label for="fn" >Name :</label></td>
+                            <td><input type="text"  [(ngModel)]="currentUpdateCandidate.name" id="fn" name="name" placeholder="Enter your name" alt="required"></td>
+                            </tr>
+                            <tr>
+                            <td><label for="co">Contact :</label></td>
+                            <td><input type="text"   [(ngModel)]="currentUpdateCandidate.contact"  id="co" name="contact" placeholder="Enter your contact" alt="required"></td>
+                            </tr>
+                            <tr>
+                            <td><label for="ba">Batch :</label></td>
+                            <td><input type="text" name="batch"   [(ngModel)]="currentUpdateCandidate.batch"  id="work" alt="required"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="co"><br><br>Course :</label></td>
+                                <td><select name="course"  [(ngModel)]="currentUpdateCandidate.course"    alt="required">
+                                    <option value="B.SC(Computer Science)">B.SC(Computer Science)</option>
+                                    <option value="B.COM">B.COM</option>
+                                    <option value="BFA">B.FA</option>
+                                    <option value="M.COM">M.COM</option>
+                                    <option value="BA">BA</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                        <td><label for="dis">Disability :</label></td>
+                        <td>
+                            <select name="disability"   [(ngModel)]="currentUpdateCandidate.disability"  id="dis" alt="required">
+                            <option value="DEAF">DEAF</option>
+                            <option value="Hard Of hearing">Hard Of hearing</option>
+                            <option value="Vision Impairment">Vision Impairment</option>
+                            <option value="Pysical Disability">Pysical Disability</option>
+                            </select>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td><label for ="pass">Year of Passing :</label></td>
+                            <td><select id="year"  [(ngModel)]="currentUpdateCandidate.year"  name="year" alt="required">
+                                <option value="1992">1992</option>
+                                <option value="1993">1993</option>
+                                <option value="1994">1994</option>
+                                <option value="1995">1995</option>
+                                <option value="1996">1996</option>
+                                <option value="1997">1997</option>
+                                <option value="1998">1998</option>
+                                <option value="1999">1999</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                                <option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2022">2023</option>
+                                <option value="2022">2024</option>
+                                <option value="2022">2025</option>
+                                <option value="2022">2026</option>
+                                <option value="2022">2027</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="work">Work Experience :</label></td>
+                            <td><textarea type="text"  name="work" [(ngModel)]="currentUpdateCandidate.work"  id="work" alt="required"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="swot">SWOT :</label></td>
+                            <td>
+                            <label>Strengths (S), Weaknesses(W), Opportunities(O), Threats(T),</label>
+                                <textarea type="checkbox" style="width:400px; height:100px;" name="swot" [(ngModel)]="currentUpdateCandidate.swot" id="str" alt="required"></textarea>
+                            </td>
+                        </tr>
+                 
+                        
+                        <tr>
+                            <td><label for="myfile"><br>12th and SSLC  certificate :</label></td>
+                            <td><input [(ngModel)]="currentUpdateCandidate.certificate" type="text" id="cerificate" name="cerificate"  alt="required"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="sig" >Sign name:</label></td>
+                            <td><input type="text" id="sign"  [(ngModel)]="currentUpdateCandidate.sign" name="sign"  alt="required">
+                            </td>
+                        </tr>
+                        <div class="text-center">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="submit" routerLink="/trainer" (click)="updateCandidate()">SAVE</button>
+           <button routerLink="/trainer" type="button" class="button" >CANCEL</button>
+    
+        </table>
+        <router-outlet></router-outlet>   
+    </form>
+    </body>   
+                    
+                
+                
+           

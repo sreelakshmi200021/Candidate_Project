@@ -1,0 +1,46 @@
+<body>
+  <div class="topnav1">
+    <a routerLink="/logincoordinator"><u>LogOut</u></a>&nbsp;
+    <a>Hi, Coordinator</a>
+</div>
+<router-outlet></router-outlet>
+  <div class="m-3">
+    <div class="wrap">
+      <div class="search">
+        <input type="text" [(ngModel)]="term" class="searchTerm" placeholder="Search ...">
+        <!-- [(ngModel)]="term" -->
+      </div>
+      <table class="table">
+        <thead>
+          <tr class="th">
+            <th>NAME</th>
+            <th>CONTACT</th>
+            <th>BATCH</th>
+            <th>COURSE</th>
+            <th>DISABILITY</th>
+            <th>YEAR OF PASSING</th>
+            <th>WORK EXPERIENCE</th>
+            <th>CERTIFICATE</th>
+            <TH>SIGN NAME</TH>
+            <th>SWOT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let stud of employee | filter: term" class="td">
+            <td>{{stud.name}}</td>
+            <td>{{stud.contact}}</td>
+            <td>{{stud.batch}}</td>
+            <td>{{stud.course}}</td>
+            <td>{{stud.disability}}</td>
+            <td>{{stud.year}}</td>
+            <td>{{stud.work}}</td>
+            <td>{{stud.certificate}}</td>
+            <td>{{stud.sign}}</td>
+            <td>{{stud.swot}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

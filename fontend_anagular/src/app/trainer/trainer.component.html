@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+    <div class="topnav1">
+            <a routerLink="/login"><u>LogOut</u></a>
+            <a>Hi, Trainer</a>
+    </div>
+    <router-outlet></router-outlet>
+    <form>
+    <table style="width:100%">
+        <tr>
+          <th>NAME</th>
+          <th>CONTACT</th>
+          <th>BATCH</th>
+          <th>COURSE</th>
+          <th>DISABILITY</th>
+          <th>YEAR OF PASSING</th>
+          <th>WORK EXPERIENCE</th>
+          <th>CERTIFICATE</th>
+          <th>SIGN NAME</th>
+          <th>SWOT</th>
+          <th>UPDATE</th>
+        </tr>
+        <tr *ngFor="let employee of employee">
+          <td>{{employee.name}}</td>
+          <td>{{employee.contact}}</td>
+          <td>{{employee.batch}}</td>
+          <td>{{employee.course}}</td>
+          <td>{{employee.disability}}</td>
+          <td>{{employee.year}}</td>
+          <td>{{employee.work}}</td>
+          <td>{{employee.certificate}}</td>
+          <td>{{employee.sign}}</td>
+          <td>{{employee.swot}}</td>
+          <td>
+             <button class="edit" type="submit" (click) = "updateCandidate(employee.id)">Edit</button>
+          </td>
+        </tr>
+        </table>
+      <button class="add" routerLink="/candidate">ADD</button>
+    </form>
+      <router-outlet></router-outlet> 
+</body>

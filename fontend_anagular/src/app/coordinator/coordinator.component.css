@@ -1,0 +1,47 @@
+body{
+  height: 120vh;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.topnav1 a {
+  float: right;
+  display: block;
+  color: rgb(255, 250, 250);
+  text-align: center;
+  padding: 14px 19px;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: -50px;
+  padding-top: -90px;
+}
+.searchTerm{
+  font-size: 20px;
+  margin-top: 30px;
+  padding: 5px;
+  margin-left: 20px;
+  border: 3px solid #09ac04;
+  height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  outline: none;
+  color: #000000;
+}
+
+.table{
+  margin-top: 20px;
+  margin-left: 10px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  color: aliceblue;
+} 
+
+thead tr th{
+  padding: 10px;
+  color: rgb(116, 2, 255);
+}
+
+tbody tr td{
+  padding: 10px;
+  color: #fdfdfd;
+}
